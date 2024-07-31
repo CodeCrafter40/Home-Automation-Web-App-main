@@ -1,0 +1,20 @@
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+/Home/owasp-suppressions.xml
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+/.DS_Store
+/Home/Home.iml
+/Home/homeclient/homeclient.iml
+/Home/homecontroller/homecontroller.iml
+/Home/homelibrary/homelibrary.iml
+/Home/homeadapter/homeadapter.iml

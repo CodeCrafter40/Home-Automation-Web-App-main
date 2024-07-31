@@ -1,0 +1,455 @@
+@media only screen and (max-width: 550px) {
+	.container {
+		padding-left: 5px;
+		padding-right: 7px;
+	}
+}
+a,hr,th,td,table,thead,tbody,tr,h1,h2,h3,h4,h5,h6,label,legend,span,i,image,img,ul,li,strong,small{
+	user-select: none !important;
+	-webkit-user-select: none !important;
+	-khtml-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+}
+a, th, td{
+	font-weight:330 !important;
+}
+h4, h5{
+	font-weight:300 !important;
+}
+button{
+	font-weight:300 !important;
+}
+.container{
+	padding-left: 4px !important;
+	padding-right: 3px !important;
+}
+.fa-rotate-45 {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.hint {
+	opacity: 0.8 !important;
+}
+.hintshade {
+	opacity: 0.45 !important;
+}
+.callout {
+	border-left-width: 5px !important;
+	padding-top: 6px !important;
+	padding-bottom: 6px !important;
+	padding-left: 12px !important;
+	padding-right: 4px !important;
+	margin-bottom: 4px !important;
+}
+.callout h4 {
+	font-size: 1.3rem !important;
+	margin-bottom: 3px !important;
+}
+
+#navbar{
+	background-color: #F5F5F5;
+}
+.modal-content h5, .modal-content a, .modal-body a, .modal-body h4 {
+	color: #000 !important;
+}
+
+.callout-secondary {
+	border-color: rgb(119,119,119) !important;
+}
+.callout-primary {
+	border-color: rgb(66,139,202) !important;
+}
+.callout-success {
+	border-color: rgb(92,184,92) !important;
+}
+.callout-danger {
+	border-color: rgb(217,83,79) !important;
+}
+.callout-warning {
+	border-color: rgb(240,173,78) !important;
+}
+.callout-info {
+	border-color: rgb(91,192,222) !important;
+}
+.callout-light {
+	border-color: rgb(238,238,238) !important;
+}
+.callout-cold {
+	border-color: rgb(244,190,238) !important;
+}
+body{
+	background-color:#000 !important;
+	/* overflow-y: scroll; */
+}
+@media only screen and (max-width: 550px) {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	#idbody::-webkit-scrollbar {
+		display: none;
+	}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	#idbody {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+}
+a:hover, a:link, a:visited, a:active {
+	text-decoration: underline;
+}
+#navbar{
+	background-color:#000;
+}
+#navbar a span{
+	color:#EEE;
+}
+#navbarSupportedContent ul li a{
+	color:#EEE;
+}
+#navbartoggle{
+	color:#EEE;
+}
+h4{
+	color: rgb(238,238,238) !important;
+}
+.callout-secondary {
+	background: #000 !important;
+}
+.callout-primary {
+	background: #000 !important;
+}
+.callout-success {
+	background: #000 !important;
+}
+.callout-danger {
+	background: #000 !important;
+}
+.callout-warning {
+	background: #000 !important;
+}
+.callout-info {
+	background: #000 !important;
+}
+.callout-light {
+	background: #000 !important;
+}
+.callout-cold {
+	background: #000 !important;
+}
+.callout-primary h4, .callout-primary a{
+	color: rgb(66,139,202) !important;
+}
+.callout-secondary h4, .callout-secondary a, .direct-secondary {
+	color: rgb(238,238,238,0.8) !important;
+}
+.callout-success h4, .callout-success a{
+	color: rgb(92,184,92) !important;
+}
+.callout-danger h4, .callout-danger a{
+	color: rgb(217,83,79) !important;
+}
+.callout-warning h4, .callout-warning a{
+	color: rgb(240,173,78) !important;
+}
+.callout-info h4, .callout-info a{
+	color: rgb(91,192,222) !important;
+}
+.callout-light h4, .callout-light a{
+	color: rgb(238,238,238) !important;
+}
+.callout-cold h4, .callout-cold a{
+	color: rgb(244,190,238) !important;
+}
+.historybackground{
+	background-color:rgb(238,238,238,0.8)!important;
+}
+.a.historybackground:focus,a.historybackground:hover,button.historybackground:focus,button.historybackground:hover{
+	background-color:rgb(218,224,229)!important;
+}
+.modal-content, .model-content .list-group-item-secondary, .lgi {
+	background-color:#000 !important;
+	border:1px solid rgb(238,238,238,0.8) !important;
+}
+.modal-content .lgi {
+	background-color:#000 !important;
+	border:1px solid rgb(238,238,238,0.8) !important;
+}
+.modal-content h5, .modal-content a, .modal-footer button, .modal-body a, .modal-body h4, .pincode {
+	color: rgb(238,238,238) !important;
+}
+.progress {
+	background-color: #404040 !important;
+}
+input[type=text], input[type=text]:focus, input[type=password], input[type=password]:focus {
+	background-color: #404040 !important;
+	color: white;
+	margin-right: 100px !important;
+}
+label, legend{
+	color: rgb(238,238,238,0.8) !important;
+}
+.text-active-primary {
+	color: #FFDB94!important;
+}
+.tr-dark-stripe-accent {
+	background-color: #1C2833 !important;
+	border: 0px !important;
+}
+.tr-dark-stripe-default {
+	border: 0px !important;
+}
+.td-no-border {
+	border: 0px !important;
+}
+.text-default{
+	color: rgb(238,238,238,0.8) !important
+}
+.text-cold{
+	color: rgb(244,190,238) !important
+}
+.widebutton {
+	width: 65px !important;
+	padding-bottom: 5px !important;
+}
+.prefixbutton {
+	width:25px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+}
+input[type="checkbox"] {
+	display: none;
+}
+input[type="checkbox"] ~ label span{
+	font-size: 1rem;
+	vertical-align: top;
+}
+input[type="checkbox"] ~ label .check-false{
+	display: inline;
+}
+input[type="checkbox"] ~ label .check-true{
+	display: none;
+}
+input[type="checkbox"]:checked ~ label .check-false{
+	display: none;
+}
+input[type="checkbox"]:checked ~ label .check-true{
+	display: inline;
+}
+.img-icon {
+	width: 20px;
+	height: 20px;
+	float:left;
+	position:relative;
+	margin-top: 2px;
+}
+.img-callout-inline {
+	width: 24px;
+	height: 24px;
+	position:relative;
+}
+.img-primary {
+	background: rgb(66,139,202); /* fixme based on text color */
+}
+.img-secondary {
+	background: rgb(238,238,238,0.8); /* fixme based on text color */
+}
+.img-success {
+	background: rgb(40, 167, 69);
+}
+.img-danger {
+	background: rgb(217,83,79); /* fixme based on text color */
+}
+.img-warning {
+	background: rgb(255,193,7);
+}
+.img-info {
+	background: rgb(91,192,222); /* fixme based on text color */
+}
+.img-light {
+	background: rgb(244,190,238); /* fixme based on text color */
+}
+.img-cold {
+	background: rgb(244,190,238); /* fixme based on text color */
+}
+
+.evBatterySlider .rs-handle  {
+	display: none;
+	background-color: transparent;
+	border: 8px solid transparent;
+	border-right-color: red;
+	margin: -10px 0px 0px 14px !important;
+	border-width: 10px 140px 10px 2px;
+}
+.evBatterySlider .rs-handle:before  {
+	display: block;
+	content: " ";
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	background: rgb(128, 128, 128);
+	right: -14px;
+	bottom: -14px;
+	border-radius: 100px;
+}
+.evBatterySlider .rs-path-color  {
+	background-color: grey;
+}
+.evBatterySlider span.rs-marker {
+	position: absolute;
+	top: -13px;
+	left: -25px;
+	font-size: 15px;color: lightgray;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.evBatterySlider span.rs-tick8 {
+	position: absolute;
+	top: -10px;
+	left: +6px;
+	font-size: 15px;
+}
+.evBatterySlider span.rs-tick16 {
+	position: absolute;
+	top: -7px;
+	left: +7px;
+	font-size: 10px;
+	color: rgb(128, 128, 128);
+}
+
+/* Range control (pv overflow) */
+
+.rangecontainer {
+	width: calc(100% - 10px);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	border: 2px solid grey;
+	border-radius: 5px;
+}
+input[type="range"] {
+	width: 100%;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	input[type='range'] {
+		overflow: hidden;
+		-webkit-appearance: none;
+		background-color: rgb(255,193,7);
+	}
+	input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		cursor: ew-resize;
+		background: red;
+		color: rgb(40, 167, 69);
+		height: 24px;
+		width: 20px;
+		border-left: 3px solid black;
+		border-right: 3px solid black;
+	}
+	input[type="range"]::-webkit-slider-thumb { box-shadow: -600px 0 0 600px;}
+}
+input[type="range"]::-moz-range-progress {
+	background-color: rgb(40, 167, 69);
+}
+input[type="range"]::-moz-range-track {
+	background-color: rgb(255,193,7);
+}
+input[type="range"]::-ms-fill-lower {
+	background-color: rgb(40, 167, 69);
+}
+input[type="range"]::-ms-fill-upper {
+	background-color: rgb(255,193,7);
+}
+.rangecontainer-labels {
+	display: flex;
+	justify-content: space-between;
+}
+.rangecontainer-labels > div {
+	color: white;
+	margin-left: 4px;
+}
+
+/*
+        START - Following CSS is based on: "Smooth arrow animation"
+
+The MIT License (MIT)
+
+Copyright (c) 2023 vlt_dev (https://codepen.io/vlt_dev/pen/NWMNzpE)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
+.arrow {
+	position: absolute;
+}
+
+.arrow-135 {
+	transform: rotate(135deg) translate(-50%, -50%);
+}
+
+.arrow-225 {
+	transform: rotate(225deg) translate(-50%, -50%);
+}
+
+.arrow-270 {
+	transform: rotate(270deg) translate(-50%, -50%);
+}
+
+.arrow span {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-bottom: 5px solid;
+	border-right: 5px solid;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animate 2s infinite;
+}
+
+.arrow-orange span {
+	border-bottom-color: rgb(255,193,7);
+	border-right-color: rgb(255,193,7);
+}
+
+.arrow span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
+
+/*
+        END - Smooth arrow animation
+*/

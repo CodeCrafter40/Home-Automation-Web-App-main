@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="de">
+
+	<head th:replace="~{basics :: head (name='Zuhause - Anmeldung')}"><title></title></head>
+	
+	<body id="idbody">
+	
+		<div class="container">
+	
+			<div style="height: 10px;"></div>
+	
+			<div th:if="${!#strings.isEmpty(loginMessage)}" th:class="'alert alert-danger callout callout-danger'">
+				<a th:text="${loginMessage}">title</a>
+			</div>
+			
+			<br/>
+			
+			<form name="f" th:action="'/'" method="POST">
+			
+				<div th:class="'alert alert-secondary callout callout-secondary'">
+					<fieldset>
+						<legend>Home - Anmeldung</legend>
+						<div style="margin-right: 20px;">
+							<label for="username">Benutzername</label> 
+							<br/>
+							<input class="form-control" type="text" id="username" name="login_username" autocorrect="off" autocomplete="off" spellcheck="false" />
+						</div>
+						<div style="margin-right: 20px;">
+							<label for="password">Passwort</label>
+							<br/>
+							<input class="form-control" type="password" id="password" name="login_password" autocorrect="off" autocomplete="off" spellcheck="false" />
+						</div>
+
+						<br/>
+						<a><strong>Cookie-Information:</strong><br/>Diese Internetseite verwendet so genannte Cookies. <br/>Um mehr zu erfahren, klicken Sie bitte hier:</a>
+						<p/>
+						<a th:href="${lawLink}" target="_blank">Impressum und Datenschutzerkl&auml;rung</a><br/>
+
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="cookiecheck" value="true" name="login_cookieok">
+							<label class="btn btn-sm pl-0" for="cookiecheck">
+								<i class="fa-solid fa-square fa-2x check-false"></i><i class="fa-solid fa-square-check fa-2x check-true"></i>
+								<a style="font-size: 1rem; horizontal-align: left; vertical-align: top;"> Ich bin mit der Verwendung von Cookies einverstanden</a>
+							</label>
+						</div>
+
+						<br/>
+										
+						<div class="form-actions pt-1">
+							<button type="submit" class="btn btn-secondary">anmelden</button>
+						</div>
+
+						<br/>
+
+						<a href="#" data-toggle="modal" data-target="#licenseAttributionModal">
+							License Attribution
+						</a>
+
+						<div class="modal fade" id="licenseAttributionModal" tabindex="-1" role="dialog" aria-labelledby="licenseAttribution" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">License Attribution</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<a href="https://www.flaticon.com/free-icons/air-conditioning" title="air conditioning icons">Air conditioning icons created by Freepik - Flaticon</a>
+										<br/>
+										<a href="https://www.flaticon.com/free-icons/electric-tower" title="electric tower icons">Electric tower icons created by Creative Stall Premium - Flaticon</a>
+										<br/>
+										<a href="https://www.flaticon.com/free-icons/solar-panel" title="solar panel icons">Solar panel icons created by Freepik - Flaticon</a>
+										<br/>
+										<a href="https://www.flaticon.com/free-icons/solar-panel" title="solar panel icons">Solar panel icons created by gravisio - Flaticon</a>
+										<br/>
+										<a href="https://www.flaticon.com/free-icons/energy" title="energy icons">Energy icons created by Freepik - Flaticon</a>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</fieldset>
+				</div>
+			</form>
+	
+		</div>
+	
+	</body>
+	
+	<div th:replace="~{basics :: scriptresources}"></div>
+
+</html>
