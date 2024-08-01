@@ -1,78 +1,51 @@
-# General
-This is a Home automation controlling web application.
+# Home Automation Control System
 
-Application is based on [Spring Boot](https://spring.io/projects/spring-boot) and uses [Thymeleaf](https://www.thymeleaf.org) for GUI rendering and [Font Awesome](https://fontawesome.com) for icons (all not included).
+## Project Overview
+This project focuses on creating a comprehensive Home Automation Control System that enables users to manage and monitor various smart home devices through an intuitive web interface. The system enhances convenience, security, and energy efficiency within the home environment.
 
-# Customizing
-Sources in */domain/ -packages are depending on individual Homematic setup and therefore needed to be changed.
+## Key Features
+- **User Authentication and Profile Management:** Secure login with role-based access control.
+- **Device Control:** Manage smart devices like lights, thermostats, security cameras, and locks.
+- **Real-time Monitoring:** View live feeds from security cameras and receive sensor updates.
+- **Notifications and Alerts:** Push notifications for critical events, such as security breaches or smoke detection.
+- **Energy Management:** Track energy consumption and receive tips for reducing usage.
+- **Voice Control Integration:** Compatible with Amazon Alexa and Google Assistant.
+- **Web Access:** Accessible through a responsive web interface.
 
-# Installation
-Build Home.jar and HomeController.jar with Maven.  
-Install both spring boot applications as described here: [Spring Documentation - Installing Spring Boot Applications] (https://docs.spring.io/spring-boot/docs/current/reference/html/deployment-install.html)  
+## Tech Stack
+### Frontend
+- **React.js:** For building a dynamic and responsive UI.
+- **HTML and CSS:** To design a visually appealing and responsive interface.
+- **JavaScript:** For interactive features and seamless user interactions.
+- **WebSocket:** For real-time updates and communication.
 
-Client (Home.jar): Commented application.properties needed to be configured in external 'homeapp.properties'.  
-Controller (HomeController.jar): Commented application.properties needed to be configured in external 'homecontroller.properties'.
+### Backend
+- **Java (Spring Boot):** For developing robust and scalable RESTful APIs.
+- **Firebase:** For real-time database and authentication.
 
-# Secure communication to CCU
-* CCU USL (property "homematic.hostName") has to be a https URL
-* Generate SSL certificate for the CCU
-```
-    openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem -subj "/CN=<CCU_HOSTNAME>/OU=<CCU_SERIAL_NO>/C=DE/emailAddress=<MAIL_ADRESS>"
-    cat key.pem > hmccu3.pem
-    cat cert.pem >> hmccu3.pem
-```    
-* Upload combined certificate/key to the CCU via the settings page
-* Set reference to certificate in property "homematic.sslcert"
-* User authentication sould be enabled in CCU settings and referenced in properties "homematic.authuser" and "homematic.authpass"
+## Contributions
+### User Interface Development
+- Developed a dynamic and responsive web interface using React.js.
+- Designed and implemented components for device control, real-time monitoring, and user management.
+- Utilized HTML and CSS for creating a visually appealing design.
+- Implemented interactive features using JavaScript.
 
-# Naming conventions inside CCU
-Some functions are needing CCU system variables and CCU programs with names corresponding to the devices.
-Device name means type and placeName in Device.java, recommended the name of the device in CCU too.
-In contrast to CCU device names and names in Device.java, CCU system variables are needed to be literal-escaped from german umlauts and removed from spaces.
+### Real-time Data Integration
+- Integrated WebSocket for real-time communication between the frontend and backend.
+- Ensured accurate real-time status updates for devices and sensors.
 
-## General
-CCU System variables:
-* refreshadress - set manually with the adress of the update method within the controller application, e.g. 'http://localhost:8098/controller/refresh', 
-used by CCU programs to trigger value refreh in the controller application. Sample CCU Script:
-```
-  string adress = dom.GetObject("refreshadress").State();
-  system.Exec("wget '" + adress + "?notify=false' --no-check-certificate -q -O /dev/null", &stdout, &stderr);
-```
-Set parameter 'notify=true' when the ccu program was called by home application instead of (CCU-sided) timer- or event triggered program, because of async start from ccu programs over Homematic XML-API.
+### User Authentication
+- Integrated Firebase authentication for secure login and user management.
 
-## Switches
-CCU System variables:
-* [devicename]Automatic - Boolean - updated by Home application to control automatic/manual mode, used by CCU programms (see below).
-* [devicename]AutomaticInfoText - String - used by Home application to show info text about program control.
-CCU Programs:
-* Any amount and name, but have to evaluate [devicename]Automatic system variable before controlling the device
+## Impact
+- **Enhanced User Experience:** Developed an intuitive and responsive interface, simplifying smart home device management and monitoring.
+- **Improved Engagement:** Created a visually appealing design, boosting user satisfaction and engagement.
+- **Real-time Interaction:** Enabled immediate feedback and control through real-time data updates.
+- **Accessibility:** Provided web access, allowing users to manage their home environment from anywhere.
 
-## Thermostates
-CCU System variables:
-* [devicename]Temperature - Number - updated by Home application, used by CCU program [devicename]Manual
-CCU Programs:
-* [devicename]Boost - starts boost mode
-* [devicename]Manual - starts manual mode with destination temperature from system variable [devicename]Temperature
+## Snapshots
 
-## Value timestamps
-CCU Device:
-* [devicename]Device - for main device
-* [devicename] - for used channel
-CCU System variable:
-* [devicename]Timestamp - Unix Timestamp of last value change - updated by CCU program, used by Home application
-CCU Program:
-* [devicename]Aktion - listener for value change - writes system variable
-```
-string ts = dom.GetObject("FensterGaestezimmer").LastDPActionTime().ToInteger();
-dom.GetObject('FensterGaestezimmerTimestamp').State(ts);
-```
+![image](https://github.com/user-attachments/assets/920702cd-3064-4e24-874a-d88d237b61ff)
+![43fe0d92081189 5e427a497d075](https://github.com/user-attachments/assets/8c9241a0-b315-4dbf-908b-b02a3c60600d)
+![14a2ef92081189 5e427a49788b1](https://github.com/user-attachments/assets/de1b042b-dcde-48d2-8666-d09937820773)
 
-# Recommended control principles:
-Simple programs (based on clocks, timers etc) are written in the CCU to ensure function even if the Home application is not running or accessible.  
-
-More complex programs are splitted. The trigger of the actor is implemented over an CCU program or Homematic XML-API call. The activator is implemented in Home application e.g. based on a hint.  
-
-Example: A roller shutter motor has CCU programs to automatically drive up and down based on sunrise and sunset times. An additional CCU program drives the shutter down if a CCU system variable (which is linked to the ‚close roller shutter‘ hint based on temperature and sunshine) is set to true.
-
-# Caution
-No guarantees are made about the suitability of this code for your own use. It is provided as-is, and you are responsible for any damage it may cause. You should not use this code without understanding it first.
