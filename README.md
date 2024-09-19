@@ -16,18 +16,6 @@ This project focuses on creating a comprehensive Home Automation Control System 
 
 ## Tech Stack
 
-![HTML](https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=black)
-![Java](https://img.shields.io/badge/Java-17-007396?logo=java&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-5.0-47A248?logo=mongodb&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-4.5.0-010101?logo=socket.io&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.2-7952B3?logo=bootstrap&logoColor=white)
-
-
-## Tech Stack
-
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=black)
 ![HTML](https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white)
